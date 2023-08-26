@@ -34,7 +34,8 @@ const ProjectList = () => {
   };
 
   return (
-    <div className="w-full p-2 md:!px-8">
+    <>
+   {!projects.length? <div class="flex items-center justify-center"> <p className="mt-5 font-weight-bold"> No project yet</p> </div>: <div className="w-full p-2 md:!px-8">
       <Create onChangeSearch={handleSearch} />
       <div className="py-3">
         {activeProjects.map((hit) => {
@@ -62,7 +63,8 @@ const ProjectList = () => {
           );
         })}
       </div>
-    </div>
+    </div>}
+    </>
   );
 };
 

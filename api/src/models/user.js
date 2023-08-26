@@ -8,7 +8,7 @@ const MODELNAME = "user";
 const Schema = new mongoose.Schema({
   name: { type: String, trim: true, unique: true },
 
-  email: { type: String, trim: true },
+  email: { type: String, trim: true, unique: true},
 
   avatar: { type: String, default: "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y" },
   banner: { type: String, default: "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y" },

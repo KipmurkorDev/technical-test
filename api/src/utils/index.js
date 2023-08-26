@@ -11,7 +11,16 @@ function validatePassword(password) {
 
   return schema.validate(password);
 }
+function validateEmail(password) {
+  const schema = new passwordValidator();
+  schema
+    .is()
+    .min(6) // Minimum length 6
+    .is()
+    .max(100); // Maximum length 100
 
+  return schema.validate(password);
+}
 module.exports = {
-  validatePassword,
+  validatePassword,validateEmail
 };
